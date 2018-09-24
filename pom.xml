@@ -24,7 +24,7 @@
 			<plugin>
 				<groupId>org.jboss.windup</groupId>
 				<artifactId>windup-maven-plugin</artifactId>
-                <version>0.7.0</version>
+                <version>4.1.0.Final</version>
 				<configuration>
 					<packages>
 						<package>com.acme</package>

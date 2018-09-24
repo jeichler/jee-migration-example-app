@@ -1,46 +1,53 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <artifactId>jee-example</artifactId>
-        <groupId>org.windup.example</groupId>
-        <version>1.0.0</version>
-        <relativePath>..</relativePath>
-    </parent>
+	<parent>
+		<artifactId>jee-example</artifactId>
+		<groupId>org.windup.example</groupId>
+		<version>1.0.0</version>
+		<relativePath>..</relativePath>
+	</parent>
 
-    <artifactId>jee-example-web</artifactId>
-    <packaging>war</packaging>
+	<artifactId>jee-example-web</artifactId>
+	<packaging>war</packaging>
 
-    <name>JEE Example Web Application</name>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.windup.example</groupId>
-            <artifactId>jee-example-services</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        
-        
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>2.5</version>
-        </dependency>
-        
-        <!-- JBoss Logging -->
-        <dependency>
-            <groupId>org.jboss.logging</groupId>
-            <artifactId>jboss-logging</artifactId>
-            <version>3.1.4.GA</version>
-            <scope>provided</scope>
-        </dependency>
+	<name>JEE Example Web Application</name>
 
-        <dependency>
-        	<groupId>javax</groupId>
-        	<artifactId>javaee-api</artifactId>
-        	<version>6.0</version>
-        	<scope>provided</scope>
-        </dependency>
-    </dependencies>
+	<dependencies>
+		<dependency>
+			<groupId>org.windup.example</groupId>
+			<artifactId>jee-example-services</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.5</version>
+		</dependency>
+
+		<!-- JBoss Logging -->
+		<dependency>
+			<groupId>org.jboss.logging</groupId>
+			<artifactId>jboss-logging</artifactId>
+			<version>3.1.4.GA</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 
 </project>

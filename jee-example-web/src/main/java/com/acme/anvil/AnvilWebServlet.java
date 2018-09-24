@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
@@ -19,6 +20,7 @@ public class AnvilWebServlet extends HttpServlet {
 
 	private static final Logger LOG = Logger.getLogger(AnvilWebServlet.class);
 	
+	/** this should trigger the hard coded IP address rule **/
 	private static final String IP_ADDRESS = "192.168.0.1";
 	
 	@Inject
@@ -30,6 +32,10 @@ public class AnvilWebServlet extends HttpServlet {
 		if(StringUtils.isNotBlank(itemId)) {
 			Long id = Long.parseLong(itemId);
 			lh.lookupItem(id);
+			
+			/** should trigger cloud-readiness rule for session **/
+			HttpSession httpSession = req.getSession();
+			httpSession.setAttribute("itemId", itemId);
 			
 			PrintWriter out = resp.getWriter();
 			out.println("<html>");

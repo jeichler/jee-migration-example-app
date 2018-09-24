@@ -1,72 +1,84 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    
-    <parent>
-        <artifactId>jee-example</artifactId>
-        <groupId>org.windup.example</groupId>
-        <version>1.0.0</version>
-        <relativePath>..</relativePath>
-    </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jee-example-services</artifactId>
-    <packaging>ejb</packaging>
+	<parent>
+		<artifactId>jee-example</artifactId>
+		<groupId>org.windup.example</groupId>
+		<version>1.0.0</version>
+		<relativePath>..</relativePath>
+	</parent>
 
-    <name>JEE Example EJB Services</name>
+	<artifactId>jee-example-services</artifactId>
+	<packaging>ejb</packaging>
 
-    <dependencies>
+	<name>JEE Example EJB Services</name>
 
-        <!-- To test missing dependencies detection. Breaks build.
-        <dependency>
-            <groupId>org.migration.support</groupId>
-            <artifactId>migration-support</artifactId>
-            <version>1.0.0</version>
-            <scope>provided</scope>
-        </dependency>
-        -->
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
 
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.6</version>
-        </dependency>
+	<dependencies>
 
-        <dependency>
-            <groupId>javax.ejb</groupId>
-            <artifactId>ejb-api</artifactId>
-            <version>3.0</version>
-            <scope>provided</scope>
-        </dependency>
-        
-        
-        <dependency>
-            <groupId>org.jboss.logging</groupId>
-            <artifactId>jboss-logging</artifactId>
-            <version>3.1.4.GA</version>
-            <scope>provided</scope>
-        </dependency>
-        
+		<!-- To test missing dependencies detection. Breaks build. <dependency> 
+			<groupId>org.migration.support</groupId> <artifactId>migration-support</artifactId> 
+			<version>1.0.0</version> <scope>provided</scope> </dependency> -->
+
 		<dependency>
-            <groupId>com.sun</groupId>
-            <artifactId>tools</artifactId>
-            <version>1.5</version>
-            <scope>system</scope>
-            <systemPath>${java.home}/../lib/tools.jar</systemPath>
-        </dependency>
-
-        <!-- WebLogic -->
-        <dependency>
-        	<groupId>javax</groupId>
-        	<artifactId>javaee-api</artifactId>
-        	<version>6.0</version>
-        	<scope>provided</scope>
-        </dependency>
-        
-        <dependency>
-		    <groupId>org.jboss.ejb3</groupId>
-		    <artifactId>jboss-ejb3-ext-api</artifactId>
-		    <version>2.0.0</version>
-		    <scope>provided</scope>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.6</version>
 		</dependency>
-    </dependencies>
+
+		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>ejb-api</artifactId>
+			<version>3.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.jboss.logging</groupId>
+			<artifactId>jboss-logging</artifactId>
+			<version>3.1.4.GA</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun</groupId>
+			<artifactId>tools</artifactId>
+			<version>1.5</version>
+			<scope>system</scope>
+			<systemPath>${java.home}/../lib/tools.jar</systemPath>
+		</dependency>
+
+		<!-- WebLogic -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.ejb3</groupId>
+			<artifactId>jboss-ejb3-ext-api</artifactId>
+			<version>2.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- for JNA -->
+		<!-- https://mvnrepository.com/artifact/net.java.dev.jna/jna -->
+		<dependency>
+			<groupId>net.java.dev.jna</groupId>
+			<artifactId>jna</artifactId>
+			<version>4.5.2</version>
+		</dependency>
+
+	</dependencies>
 
 </project>
